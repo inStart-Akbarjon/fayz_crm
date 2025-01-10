@@ -1,0 +1,135 @@
+
+
+.client-list-container {
+    padding: 20px;
+    max-width: 100%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* ClientList.css */
+.filter-button {
+    background-color: #0088fe;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.filter-button:hover {
+    background-color: #005bb5;
+}
+
+
+.main-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.main-page-container h2 {
+    margin-bottom: 20px;
+}
+
+.main-page-container p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.edit-form {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.edit-form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.edit-form .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.edit-form .save-btn {
+    background-color: #4CAF50;
+}
+
+.edit-form .cancel-btn {
+    background-color: #f44336;
+    margin-left: 10px;
+}
+
+.client-list {
+    list-style: none;
+    padding: 0;
+}
+
+.client-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.client-item-i {
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.client-item span {
+    flex-grow: 1;
+}
+
+.client-item .btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.client-item .view-products-btn {
+    background-color: #2196F3;
+}
+
+.client-item .edit-btn {
+    background-color: #FFC107;
+}
+
+.client-item .delete-btn {
+    background-color: #f44336;
+}
+
+.error-message {
+    color: #f44336;
+    text-align: center;
+}

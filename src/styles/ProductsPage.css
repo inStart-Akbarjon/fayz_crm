@@ -1,0 +1,893 @@
+/* src/styles/ProductsPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', "Open Sans", sans-serif; 
+    
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem; 
+  }
+  html::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255); 
+  }
+  html::-webkit-scrollbar-thumb {
+    background: #1a264e; 
+          
+}
+
+:root {
+    /* RAL Classic Colors */
+    --ral-1000: #6C4F28; /* Green beige */
+    --ral-1001: #D2B36A; /* Beige */
+    --ral-1002: #B9A86B; /* Sand yellow */
+    --ral-1003: #F7C600; /* Signal yellow */
+    --ral-1004: #F6C300; /* Golden yellow */
+    --ral-1005: #F5A300; /* Honey yellow */
+    --ral-1006: #F6C600; /* Luminous yellow */
+    --ral-1007: #F5B300; /* Satin yellow */
+    --ral-1011: #6F4F28; /* Brown beige */
+    --ral-1012: #F1C700; /* Zinc yellow */
+    --ral-1013: #F5F5F5; /* Oyster white */
+    --ral-1014: #F5E8D0; /* Ivory white */
+    --ral-1015: #E9D8C6; /* Light ivory */
+    --ral-1016: #F5F5F5; /* Sulfur yellow */
+    --ral-1017: #F5E300; /* Canary yellow */
+    --ral-1018: #F7E300; /* RAL Yellow */
+    --ral-1021: #4A3B22; /* Rape yellow */
+    --ral-1023: #F6C600; /* Traffic yellow */
+    --ral-1024: #D6A10D; /* Ochre brown */
+    --ral-1026: #F5A300; /* Luminous yellow */
+    --ral-1027: #D2B37D; /* Cement grey */
+    --ral-1028: #7A5B30; /* Dull brown */
+    --ral-1032: #F7C300; /* Broom yellow */
+    --ral-1033: #F6B600; /* Sun yellow */
+    --ral-1034: #F6C600; /* Golden yellow */
+    --ral-1035: #8A5D2F; /* Light brown */
+    --ral-1036: #7F5D3F; /* Dark brown */
+    --ral-1037: #F7E300; /* Golden yellow */
+
+    /* RAL Design Colors */
+    --ral-2000: #C74C5E; /* Beech red */
+    --ral-2001: #B27F7D; /* Red brown */
+    --ral-2002: #D0A08F; /* Blood orange */
+    --ralwood: #dfba57; /* Pastel orange */
+    --ral-2003: #F5A300; /* Pastel orange */
+    --ral-2004: #F78F1E; /* Pure orange */
+    --ral-2005: #F74E3F; /* Luminous red */
+    --ral-2011: #C68E6E; /* Deep brown */
+    --ral-2012: #BD8D7C; /* Brown orange */
+    --ral-2013: #F6A300; /* Deep orange */
+    --ral-2014: #CF6A5D; /* Light brown */
+    --ral-2015: #CF6A6C; /* Salmon pink */
+    --ral-3000: #DA291C; /* Flame red */
+    --ral-3001: #A73A1E; /* Ruby red */
+    --ral-3002: #A21D27; /* Wine red */
+    --ral-3003: #A31D1E; /* Scarlet red */
+    --ral-3004: #6D3F31; /* Dark red */
+    --ral-3005: #BF0400; /* Luminous red */
+    --ral-3007: #3B2D1F; /* Black red */
+    --ral-3008: #5D2D0D; /* Red brown */
+    --ral-3011: #3B2D1F; /* Brown red */
+    --ral-3012: #8D5B2E; /* Beige brown */
+    --ral-3013: #C40D2D; /* Tomato red */
+    --ral-3014: #C76C67; /* Antic rose */
+    --ral-3015: #D2A1A2; /* Light pink */
+    --ral-3016: #C02C2B; /* Coral red */
+    --ral-3017: #F5A3A0; /* Rose pink */
+    --ral-3018: #C71C23; /* Strawberry red */
+    --ral-3020: #C8102E; /* Luminous red */
+    --ral-3022: #CC2326; /* Light red */
+    --ral-3024: #BF0A30; /* Luminous red */
+    --ral-3026: #C8102E; /* Traffic red */
+    --ral-3031: #7A2A2F; /* Orient red */
+    --ral-3032: #6D1F1F; /* Pearl red */
+    --ral-3033: #E24D6B; /* Ruby red */
+    --ral-3034: #BD6D8C; /* Pink red */
+    --ral-3035: #BD3A4D; /* Deep red */
+
+    /* RAL 6000-8000 */
+    --ral-6000: #004B49; /* Patina green */
+    --ral-6001: #003D34; /* Emerald green */
+    --ral-6002: #003A34; /* Leaf green */
+    --ral-6003: #004B49; /* Dark green */
+    --ral-6004: #003B49; /* Sapphire blue */
+    --ral-6005: #004B49; /* Moss green */
+    --ral-6006: #2F3B32; /* Wine green */
+    --ral-6007: #003A35; /* Bottle green */
+    --ral-6008: #004B49; /* Green blue */
+    --ral-6009: #00443D; /* Pine green */
+    --ral-6010: #003D2A; /* Grass green */
+    --ral-6011: #004D3F; /* Reseda green */
+    --ral-6012: #004D44; /* Blue grey */
+    --ral-6013: #003D2A; /* Mint green */
+    --ral-6014: #003B2B; /* Sapphire green */
+    --ral-6015: #003F2D; /* Slate green */
+    --ral-6016: #004B4F; /* Green blue */
+    --ral-6017: #004D3A; /* Traffic green */
+    --ral-6018: #004D2F; /* Yellow green */
+    --ral-6019: #004D3F; /* Pastel green */
+    --ral-6020: #003F2C; /* Chrome green */
+    --ral-6021: #004D36; /* Pale green */
+    --ral-6022: #3E4D3E; /* Brown green */
+    --ral-6024: #003A1F; /* Traffic green */
+    --ral-6025: #004D3D; /* Emerald green */
+    --ral-6026: #004D2F; /* Luminous green */
+    --ral-6027: #003F2D; /* Light grey-green */
+    --ral-6028: #003F32; /* Mint green */
+    --ral-6029: #003D2A; /* Blue green */
+    --ral-6032: #003D2C; /* Luminous green */
+    --ral-6033: #004B3E; /* Ocean green */
+    --ral-6034: #004D2F; /* Pastel blue */
+    --ral-6035: #004F2D; /* Light green */
+    --ral-6036: #004F2E; /* Green blue */
+    --ral-6037: #004B3E; /* Luminous green */
+    --ral-6038: #004F2D; /* Bright green */
+    --ral-7000: #9E9E9E; /* Squirrel grey */
+    --ral-7001: #8C8C8C; /* Silver grey */
+    --ral-7002: #7F7F7F; /* Olive grey */
+    --ral-7003: #6B6B6B; /* Moss grey */
+    --ral-7004: #4D4D4D; /* Silver grey */
+    --ral-7005: #4F4F4F; /* Mouse grey */
+    --ral-7006: #3F3F3F; /* Beech grey */
+    --ral-7008: #3C3C3C; /* Brown grey */
+    --ral-7009: #2D2D2D; /* Green grey */
+    --ral-7010: #1E1E1E; /* Tarpaulin grey */
+    --ral-7011: #1E1E1E; /* Iron grey */
+    --ral-7012: #2C2C2C; /* Basalt grey */
+    --ral-7013: #2B2B2B; /* Brown grey */
+    --ral-7015: #1A1A1A; /* Slate grey */
+    --ral-7016: #363636; /* Anthracite grey */
+    --ral-7017: #1C1C1C; /* Black grey */
+    --ral-7018: #1E1E1E; /* Black grey */
+    --ral-7021: #1E1E1E; /* Black grey */
+    --ral-7022: #2B2B2B; /* Umbra grey */
+    --ral-7023: #3B3B3B; /* Concrete grey */
+    --ral-7024: #2C2C2C; /* Graphite grey */
+    --ral-7026: #1F1F1F; /* Granite grey */
+    --ral-7030: #6C6C6C; /* Stone grey */
+    --ral-7031: #6D6D6D; /* Slate grey */
+    --ral-7032: #8C8C8C; /* Pebble grey */
+    --ral-7033: #7F7F7F; /* Concrete grey */
+    --ral-7034: #6C6C6C; /* Yellow grey */
+    --ral-7035: #8C8C8C; /* Light grey */
+    --ral-7036: #6D6D6D; /* Fine grey */
+    --ral-7037: #7F7F7F; /* Dusty grey */
+    --ral-7038: #8C8C8C; /* Silver grey */
+    --ral-7039: #4F4F4F; /* Anthracite grey */
+    --ral-7040: #7F7F7F; /* Window grey */
+    --ral-7042: #8C8C8C; /* Concrete grey */
+    --ral-7043: #6D6D6D; /* Anthracite grey */
+    --ral-7044: #7F7F7F; /* Silk grey */
+    --ral-7045: #8C8C8C; /* Slate grey */
+    --ral-7046: #8C8C8C; /* Squirrel grey */
+    --ral-7047: #9E9E9E; /* Anthracite grey */
+    --ral-8000: #4F3B23; /* Green brown */
+    --ral-8001: #5A3A1B; /* Coffee brown */
+    --ral-8002: #6A3F1F; /* Bronze brown */
+    --ral-8003: #6C4F2B; /* Orange brown */
+    --ral-8004: #7D4F23; /* Copper brown */
+    --ral-8007: #6C4F2B; /* Fawn brown */
+    --ral-8008: #6F4F2B; /* Olive brown */
+    --ral-8009: #5A3A1B; /* Coffee brown */
+    --ral-8011: #4F3B23; /* Nut brown */
+    --ral-8012: #6A3F1F; /* Red brown */
+    --ral-8014: #4F3B23; /* Sepia brown */
+    --ral-8015: #3F2A1D; /* Coffee brown */
+    --ral-8016: #3C1F14; /* Brown black */
+    --ral-8017: #5e4432; /* Chocolate brown */
+    --ral-8019: #251400; /* Black brown */
+    --ral-8022: #3C1F14; /* Brown black */
+    --ral-8023: #6A3F1F; /* Orange brown */
+    --ral-8024: #5A3A1B; /* Beige brown */
+    --ral-8025: #6C4F2B; /* Light brown */
+    --ral-8026: #4F3B23; /* Chocolate brown */
+    --ral-8027: #6F4F2B; /* Beige brown */
+    --ral-8028: #4F3B23; /* Dark brown */
+    --ral-8029: #6A3F1F; /* Dark brown */
+    --ral-9001: #F5F5F5; /* Silver white */
+    --ral-9002: #E3E3E3; /* Grey white */
+    --ral-9003: #F5F5F5; /* Signal white */
+    --ral-9004: #000000; /* Signal black */
+    --ral-9005: #000000; /* Jet black */
+    --ral-9006: #D0D0D0; /* White aluminium */
+    --ral-9007: #000000; /* Black */
+    --ral-9010: #F5F5F5; /* Pure white */
+    --ral-9011: #000000; /* Graphite black */
+}
+
+body {
+    background-color: #f7f9fd;
+}
+
+.loading{
+    margin-top: 25%;
+    margin-left: 55%;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fixed{
+    position: fixed;
+    left: 50%;
+    z-index: 999;
+    top: 0%;
+}
+
+.top{
+    margin-top: 7%;
+}
+
+.filter-i{
+    width: 100%;
+    background-color: #1a264e;
+    padding: 15px 11%;
+    margin-bottom: 10px;
+}
+.filter-i .function{
+    font-size: medium;
+    font-weight: 600;
+    color: #fff;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 32px;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: #1a264e;
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav .logo img{
+    width: 30px;
+    height: 30px;
+}
+
+nav .logo a{
+    color: #f5f5f5;
+    font-weight: 600;
+}
+
+nav .nav-links{
+    display: flex;
+    gap: 24px;
+}
+
+nav .nav-links a{
+    font-size: 14px;
+    color: #d1d1d1;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav .nav-links a:hover{
+    color: #ffffff;
+}
+
+nav button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    gap: 3px;
+    font-size: 14px;
+    padding: 6px 20px;
+    background: #414a67;
+    color: #ffffff;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+nav button:hover,
+.hero .left-section .top .buttons button.doc:hover,
+.contact .items .item button:hover{
+    color: #414a67;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+nav button i{
+    font-size: 20px;
+}
+
+.product-item.steel-sheet {
+    background-color: #8017 !important;
+    color: rgb(209, 209, 209) !important;    
+}
+
+.product-item.wood {
+    background-color: rgb(236, 238, 144) !important;
+    color: rgb(236, 238, 144) !important;
+}
+
+.product-item.screws {
+    background-color: lightcoral !important;
+}
+
+.border {
+    box-shadow: 0px 0px 0px 3px #00000025;
+}
+
+.no{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    font-size: medium;
+    font-weight: 900;
+}
+
+.product-page {
+    width: 80%; /* Увеличьте ширину страницы, например, до 80% от экрана */
+    margin: 0 auto; /* Выравнивание по центру */
+    padding: 20px;
+}
+
+/* src/styles/ProductList.css */
+.product-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd; 
+    align-items: center;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+
+
+.product-item-i {
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.product-summary {
+    background-color: #f9f9f9;
+    padding: 0px 20px;
+    position: sticky; /* Держит блок вверху, когда прокручиваются детали */
+    top: 0;
+    z-index: 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.details{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.product-summary p span {
+    font-weight: 500;
+    
+}
+
+.product-summary-a p span {
+    font-weight: 600;
+    margin-right: 30px;
+    
+}
+
+
+.product-summary-a {
+    background-color: #f3f3f300;
+    padding: 5px 15px;
+    position: sticky; /* Держит блок вверху, когда прокручиваются детали */
+    top: 0;
+    z-index: 0;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.product-summary-i {
+    background-color: #f9f9f9;
+    padding: 30px 44px;
+    border: 1px solid #d3d3d3;
+    top: 0;
+    z-index: 0;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    margin-top: 20px;    
+    width: 97%;
+    margin-left: 17px;
+}
+
+.product-summary-i .details-i {
+    margin-right: -35px;
+}
+
+.product-summary-i p span {
+    font-weight: 600;
+    margin-right: 30px;
+    
+}
+
+.product-list-i{
+    justify-content: center;
+}
+
+.product-details {
+    padding: 10px;
+    background-color: #fafafa;
+}
+
+.buttons {
+    text-align: right;
+    margin-right: -20px;
+}
+
+
+.wrapper {
+    max-width: 100%; /* Увеличьте ширину контейнера */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sub-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-space-i {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-space-i .input {
+margin-left: 5px;
+margin-right: 5px;
+}
+
+.flex-space-a{
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-space-c{
+    display: grid;
+    justify-content:flex-end;
+    align-items: center;
+    margin-right: -1%;
+    margin-top: 45px;
+    
+}
+
+
+.chart-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.chart-legend {
+    margin-left: 30px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.color-box {
+    width: 10px;
+    height: 10px;
+    border-radius: 20%;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.legend-item p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.input {
+    display: block;
+    width: 100%;
+    padding: 8.5px 30px;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.3em;
+    color: #414a67;
+    outline: none;
+    font-weight: 400;
+    margin-bottom: 0.6em;
+    margin-top: 0.6em;
+}
+
+.input-a {
+    display: block;
+    width: 50%;
+    padding: 8.5px 30px;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.3em;
+    color: #414a67;
+    outline: none;
+    font-weight: 400;
+    margin-bottom: 0.6em;
+    margin-top: 0.6em;
+}
+
+.input-b {
+    display: block;
+    width: 10%;
+    padding: 8.5px 30px;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.3em;
+    color: #414a67;
+    outline: none;
+    font-weight: 400;
+    margin-bottom: 0.6em;
+    margin-top: 0.6em;
+}
+
+.input-i {
+    display: block;
+    width: 100%;
+    padding: 8.5px 30px;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.3em;
+    color: #414a67;
+    outline: none;
+    font-weight: 400;
+}
+
+.input-c {
+    display: block;
+    width: 100%;
+    padding: 8.5px 30px;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.3em;
+    color: #414a67;
+    outline: none;
+    font-weight: 400;
+    margin-bottom: 0.6em;
+}
+
+.wrapper h3 {
+    color: #1a264e;
+    font-weight: 500;
+    margin-bottom: 0.6em;
+}
+
+.container input {
+    display: block;
+    width: 100%;
+    padding: 0.6em 0.3em;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.3em;
+    color: #414a67;
+    outline: none;
+    font-weight: 400;
+    margin-bottom: 0.6em;
+}
+
+.container input:focus {
+    border-color: #587ef4;
+}
+
+
+
+.output-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.total-amount-container {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Кнопка добавления продукта */
+
+
+.submit {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #0056b3;
+}
+
+.select {
+    color: #20346e;
+}
+
+.select-type {
+    padding: 6px 18px;
+    border: 1px solid #ddd;
+    border-radius: 4px;    
+    color: #3e455c;
+    transition: 200ms;
+}
+
+.select-type:hover {
+    background-color: #cacaca9c;
+    transition: 200ms;
+}
+
+
+.select-type option{
+    color: #3e455c;
+}
+
+.close {
+    background: #1a264e;
+    cursor: pointer;
+    font-size: small;
+    margin-left: 1em;
+    border: 1px solid #ddd;
+    padding: 6px 18px;
+    border-radius: 4px;
+    color: #dee5fc;
+}
+
+.add {
+    background: #1a264e;
+    cursor: pointer;
+    font-size: small;
+    border: 1px solid #ddd;
+    padding: 6px 18px;
+    border-radius: 0.3em;
+    color: #dee5fc;
+}
+
+.add-c {
+    background: #1a264e;
+    cursor: pointer;
+    font-size: small;
+    border: 1px solid #ddd;
+    padding: 8.5px 30px;
+    border-radius: 0.3em;
+    color: #dee5fc;
+}
+
+/* Стили для редактирования продукта */
+.user-amount-container {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.output-container p {
+    font-weight: 200;
+    margin-bottom: 0.6em;
+}
+
+.output-container span {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    color: #e5e5e5;
+}
+
+
+
+.list {
+    background-color: #fff;
+    padding: 1.8em 1.2em;
+    box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+    border-radius: 0.6em;
+}
+
+.sublist-content {
+    width: 100%;
+    border-left: 0.3em solid #587ef4;
+    margin-bottom: 0.6em;
+    padding: 0.5em 1em;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr 1fr;
+}
+
+.product {
+    font-weight: 500;
+    color: #1a264e;
+}
+
+.amount {
+    color: #414a67;
+    margin-left: 20%;
+}
+
+.icons-container {
+    width: 5em;
+    margin: 1.2em;
+    align-items: center;
+}
+
+.product-title {
+    margin-bottom: 1em;
+}
+
+.hide {
+    display: none;
+}
+
+.error {
+    color: #ff465a;
+}
+
+.diogram{
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 5px #cecdcd88;
+
+}
+
+
+.diogram-s{
+    box-shadow: 0px 0px 0px 2px #e8e8e894;
+    border-radius: 10px;
+    padding: 10px 20px;    
+}
+
+.diogram-c{
+    box-shadow: 0px 0px 0px 2px #e8e8e894;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.edit {
+    margin-left: auto;
+}
+
+.edit {
+    background: #0b5257;
+    cursor: pointer;
+    margin-right: 1em;
+    border: 1px solid #ddd;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: #e1e3e7;
+}
+
+.product-date {
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+    font-size: smaller;
+}
+
+.info {
+    background: #fdfdfd;
+    font-weight: 500;
+    align-items: center;
+    font-size: small;
+    cursor: pointer;
+    margin-right: 1em;
+    border: 1px solid #cecdcd;
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: rgb(70, 87, 131);
+    transition: 150ms;
+}
+
+.info-a {
+    background: #cecdcd49;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 4px;
+    max-width: 80%;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    transition: 150ms;
+    margin-bottom: 10px;
+    margin-left: 5%;
+    color: #00239729;
+}
+
+.info-a a {
+    text-decoration: none;
+    color: #000000;
+    margin-left: 5%;
+}
+
+.info-a:hover {
+    background: #c4c4c4;
+}
+
+.info-a:active {
+    background: #dbdbdb;
+}
+
+.info:hover {
+    background: #dbdbdb;
+}
+
+.bold{
+    font-weight: 900;
+}
+
+.delete {
+    background: #1a264e;
+    cursor: pointer;
+    margin-right: 1em;
+    border: 1px solid #ddd;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: #dee5fc;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        font-size: 14px;
+    }
+
+    .sub-container {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+}
+
