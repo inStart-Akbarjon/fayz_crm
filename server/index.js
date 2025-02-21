@@ -7,6 +7,7 @@ const productRoutes = require('./routes/products')
 const importedProductsRouter = require('./routes/importedProducts')
 const Client = require('./models/Client')
 const Product = require('./models/Product')
+const serverless = require('serverless-http')
 
 dotenv.config()
 
@@ -17,9 +18,13 @@ app.use(cors())
 app.use(express.json())
 
 // Подключаем маршруты
-app.use('/api/clients', clientRoutes)
-app.use('/api/clients', productRoutes)
-app.use('/api/imported-products', importedProductsRouter)
+app.use('/.netlify/functions/api/clients', clientRoutes)
+app.use('/.netlify/functions/api/clients', productRoutes)
+app.use('/.netlify/functions/api/imported-products', importedProductsRouter)
+
+app.get("/.netlify/functions/test", (req, res) => {
+    res.json({"name": "hello world"})
+})
 
 app.get('/api/imported-products/:id', async (req, res) => {
     try {
@@ -67,14 +72,6 @@ app.get('/api/clients/product/:importedProductId', async (req, res) => {
     }
 })
 
-const startServer = async () => {
-  try {
-    await mongoose.connect(process.env.MONGO_URI).then(() => console.log('MongoDB connected')).catch(err => console.log(err));
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
-  } catch (error) {
-    console.log(error);
-    
-  }
-}
+mongoose.connect(process.env.MONGO_URI).then(() => console.log('MongoDB connected')).catch(err => console.log(err));
 
-startServer()
+module.exports.handler = serverless(app);
